@@ -30,9 +30,13 @@ public class Intermedia implements Runnable {
         public void run() {
             
             try { 
-                System.out.println(Thread.currentThread().getName());
+                if(Thread.currentThread().getName().equals("Conexion"))Thread.sleep(4000);
+              if(Thread.currentThread().getName().equals("Guardar"))Thread.sleep(6000);
+                if(Thread.currentThread().getName().equals("Impresion"))Thread.sleep(8000);
+                
+            System.out.println(Thread.currentThread().getName());
             System.out.println("Soy un thread mediano");
-            if(Thread.currentThread().getName().equals("Conexion"))Thread.sleep(8000);
+            
             }catch(Exception e){}
         }
 
